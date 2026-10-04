@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Andrea García | Ketsaltik</title>
+<meta name="description" content="Maquillista Artística · Body Paint · Catrina — Perfil profesional en Ketsaltik">
+<meta name="theme-color" content="#fffdf8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Fraunces:opsz,wght@9..144,600&family=Nunito+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+
+/* ══════════════════════════════════
+   TOKENS — sistema Ketsaltik
+   ══════════════════════════════════ */
+:root {
+  --cp:       #d1006f;   /* primario — magenta */
+  --cp-h:     #a8005a;
+  --cv:       #5f12a1;   /* violeta */
+  --ci:       #093bb5;   /* indigo / links */
+  --cy:       #f9bf0f;   /* amarillo — cempasúchil */
+  --cc:       #04c1f5;   /* cian */
+  --ct:       #2b1a4a;   /* texto principal */
+  --ct2:      #5a4d6b;   /* texto secundario */
+  --cb:       #ebe3f2;   /* borde */
+  --cs:       #ffffff;   /* superficie blanca */
+  --cf:       #fffdf8;   /* fondo crema */
+  --cd:       #fff7dc;   /* durazno suave */
+  --cw:       #157a3c;   /* whatsapp verde */
+  --cw-h:     #0f5c2d;
+
+  --fh: 'Fraunces', Georgia, serif;
+  --fm: 'Caveat', cursive;
+  --fb: 'Nunito Sans', system-ui, sans-serif;
+
+  --sh1: 0 2px 6px  rgba(42,31,26,.08);
+  --sh2: 0 6px 18px rgba(42,31,26,.12);
+  --sh3: 0 14px 34px -10px rgba(42,31,26,.35);
+
+  --r:    12px;
+  --rl:   20px;
+  --pill: 999px;
+}
+
+/* ══════════════════════════════════
+   RESET + BASE
+   ══════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+body { background: var(--cf); color: var(--ct); font-family: var(--fb); line-height: 1.6; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: var(--ci); text-underline-offset: 3px; }
+a:hover { color: var(--cp); }
+h1, h2, h3 { font-family: var(--fh); line-height: 1.15; color: var(--ct); text-wrap: balance; }
+p { margin: 0 0 1rem; }
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 4vw, 2.5rem);
+}
+
+/* ══════════════════════════════════
+   NAVBAR
+   ══════════════════════════════════ */
+#nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255,253,248,.95);
+  border-bottom: 1px solid var(--cb);
+  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+  padding: 0 clamp(1rem,4vw,2.5rem);
+  height: 68px;
+  display: flex; align-items: center; justify-content: space-between;
+  transition: box-shadow .3s;
+}
+#nav.scrolled { box-shadow: 0 2px 12px rgba(42,31,26,.1); }
+
+.nav-logo { display: flex; align-items: center; gap: .65rem; text-decoration: none; }
+.nav-k {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--cp);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--fh); font-weight: 600; font-size: 1.15rem; color: #fff;
+  flex-shrink: 0;
+}
+.nav-marca  { font-size: .65rem; text-transform: uppercase; letter-spacing: 3px; color: var(--ct2); line-height: 1; }
+.nav-nombre { font-family: var(--fh); font-size: .92rem; color: var(--ct); line-height: 1.2; }
+
+.nav-menu { display: flex; align-items: center; gap: .5rem; list-style: none; }
+.nav-menu a {
+  display: block; padding: .5rem .7rem; border-radius: 6px;
+  font-size: .9rem; font-weight: 700; color: var(--ct); text-decoration: none;
+  transition: color .15s;
+}
+.nav-menu a:hover { color: var(--cp); }
+
+.btn-wa-nav {
+  background: var(--cw); color: #fff; border: none;
+  padding: 9px 20px; border-radius: var(--pill);
+  font: 700 .88rem/1 var(--fb);
+  display: inline-flex; align-items: center; gap: 7px;
+  text-decoration: none; cursor: pointer; white-space: nowrap;
+  transition: background .15s;
+}
+.btn-wa-nav:hover { background: var(--cw-h); color: #fff; }
+
+/* ══════════════════════════════════
+   HERO
+   ══════════════════════════════════ */
+.hero {
+  padding: 80px 0 clamp(3rem,8vw,5rem);
+  background:
+    radial-gradient(circle at  8% 20%, rgba(239,6,136,.10), transparent 40%),
+    radial-gradient(circle at 92% 80%, rgba(4,193,245,.12),  transparent 42%),
+    radial-gradient(circle at 70%  5%, rgba(249,191,15,.12), transparent 38%),
+    var(--cf);
+}
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: clamp(2rem,5vw,4.5rem);
+  align-items: center;
+}
+@media (max-width: 820px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-foto  { order: -1; }
+}
+
+/* texto hero */
+.hero-eyebrow {
+  display: inline-block; margin-bottom: .4rem;
+  font: 600 clamp(1.3rem,3vw,1.65rem)/1 var(--fm);
+  color: var(--cv); transform: rotate(-2deg);
+}
+.hero-nombre {
+  font-size: clamp(2.6rem,6vw,4.4rem);
+  margin-bottom: .3rem;
+}
+.hero-nombre em { font-style: italic; color: var(--cp); }
+.hero-titulo {
+  font-size: clamp(.95rem,2vw,1.15rem);
+  color: var(--ct2); font-weight: 400;
+  margin-bottom: .75rem;
+}
+.hero-ciudad {
+  display: inline-flex; align-items: center; gap: .4rem;
+  font-size: .88rem; font-weight: 700; color: var(--ct2);
+  margin-bottom: 1.5rem;
+}
+.hero-bio {
+  font-size: 1.02rem; color: var(--ct2); line-height: 1.8;
+  max-width: 520px; margin-bottom: 1.75rem;
+}
+
+/* stats */
+.hero-stats {
+  display: flex; gap: 1.75rem; flex-wrap: wrap;
+  margin-bottom: 2rem;
+  padding: 1.1rem 1.5rem;
+  background: var(--cs); border-radius: var(--r); box-shadow: var(--sh1);
+  width: fit-content;
+}
+.stat-n { font: 600 2.1rem/1 var(--fh); color: var(--cp); }
+.stat-l { font-size: .66rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--ct2); margin-top: 4px; line-height: 1.3; }
+
+/* botones hero */
+.hero-btns { display: flex; gap: .75rem; flex-wrap: wrap; }
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+  min-height: 48px; padding: .75rem 1.6rem;
+  border-radius: var(--pill); border: 2px solid transparent;
+  font: 700 1rem/1.2 var(--fb); text-decoration: none; cursor: pointer;
+  transition: background .15s, color .15s, border-color .15s, transform .15s;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn-prim  { background: var(--cp); color: #fff; border-color: var(--cp); }
+.btn-prim:hover { background: var(--cp-h); border-color: var(--cp-h); color: #fff; }
+.btn-sec   { background: transparent; color: var(--cp); border-color: var(--cp); }
+.btn-sec:hover { background: var(--cp); color: #fff; }
+.btn-wa    { background: var(--cw); color: #fff; border-color: var(--cw); }
+.btn-wa:hover { background: var(--cw-h); border-color: var(--cw-h); color: #fff; }
+
+/* foto polaroid */
+.hero-foto { display: flex; justify-content: center; align-items: flex-start; }
+.polaroid {
+  background: #fff;
+  padding: 10px 10px 28px;
+  box-shadow: var(--sh3);
+  border-radius: 4px;
+  transform: rotate(-2.5deg);
+  display: inline-block;
+  transition: transform .35s;
+  max-width: 290px;
+}
+.polaroid:hover { transform: rotate(0deg) scale(1.02); }
+.polaroid img { width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 2px; }
+.polaroid-pie {
+  text-align: center; padding-top: 7px;
+  font-family: var(--fm); font-size: 1.05rem; color: var(--ct2);
+}
+
+/* ══════════════════════════════════
+   SECCIONES — base
+   ══════════════════════════════════ */
+.section       { padding: clamp(3.5rem,8vw,5.5rem) 0; }
+.section-white { background: var(--cs); }
+.section-cream { background: var(--cd); }
+
+.section-head {
+  max-width: 680px; margin: 0 auto clamp(2rem,5vw,3.5rem);
+  text-align: center;
+}
+.eyebrow {
+  display: inline-block; margin-bottom: .3rem;
+  font: 600 clamp(1.3rem,3vw,1.6rem)/1.1 var(--fm);
+  color: var(--cv); transform: rotate(-2deg);
+}
+.section-head h2 { font-size: clamp(1.8rem,4vw,2.6rem); }
+.section-head p  { color: var(--ct2); font-size: 1.05rem; margin-top: .4rem; margin-bottom: 0; }
+
+/* ══════════════════════════════════
+   SOBRE MÍ
+   ══════════════════════════════════ */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 2.5rem; align-items: start;
+}
+@media (max-width: 720px) { .about-grid { grid-template-columns: 1fr; } }
+
+.about-body p { color: var(--ct2); font-size: 1.02rem; line-height: 1.8; }
+
+.tags-wrap { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1.5rem; }
+.tag {
+  display: inline-flex; align-items: center;
+  padding: .4rem 1rem; border-radius: var(--pill);
+  font-size: .83rem; font-weight: 700;
+}
+.tag-a { background: #f0e8fc; color: var(--cv); }
+.tag-b { background: #ffe8f3; color: var(--cp); }
+.tag-c { background: #e0f7fd; color: #046080; }
+.tag-d { background: #fffadc; color: #7a5800; }
+.tag-e { background: #e8f5e9; color: #2e7d32; }
+
+.aside-label { font-size: .72rem; text-transform: uppercase; letter-spacing: 2px; color: var(--ct2); font-weight: 700; margin-bottom: .65rem; }
+
+.social-row { display: flex; gap: .5rem; flex-wrap: wrap; margin-top: 1.5rem; }
+.soc-a {
+  width: 40px; height: 40px; border-radius: 50%;
+  border: 2px solid var(--cb);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--ct2); font-size: .93rem; text-decoration: none;
+  transition: border-color .2s, color .2s;
+}
+.soc-a:hover { border-color: var(--cp); color: var(--cp); }
+
+/* ══════════════════════════════════
+   TRAYECTORIA — timeline
+   ══════════════════════════════════ */
+.timeline {
+  position: relative; padding-left: 2rem; max-width: 700px; margin-inline: auto;
+}
+.timeline::before {
+  content: ''; position: absolute;
+  left: .65rem; top: 14px; bottom: 14px;
+  width: 3px;
+  background: linear-gradient(to bottom, var(--cp), var(--cv), var(--cc));
+}
+.tl-item { position: relative; padding: 0 0 2.5rem 2rem; }
+.tl-item:last-child { padding-bottom: 0; }
+
+.tl-dot {
+  position: absolute; left: -.45rem; top: 6px;
+  width: 24px; height: 24px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: .6rem; font-weight: 700;
+  box-shadow: 0 0 0 3px var(--cd);
+}
+.tl-dot-estudio  { background: var(--cv); color: #fff; }
+.tl-dot-trabajo  { background: var(--cp); color: #fff; }
+.tl-dot-practica { background: var(--cc); color: #046080; }
+.tl-dot-logro    { background: var(--cy); color: #7a5800; }
+
+.tl-card {
+  background: var(--cs); border: 1.5px solid var(--cb);
+  border-radius: var(--r); padding: 1.1rem 1.25rem;
+  box-shadow: var(--sh1);
+  transition: box-shadow .2s, border-color .2s;
+}
+.tl-card:hover { box-shadow: var(--sh2); border-color: var(--cp); }
+.tl-periodo { font-size: .7rem; text-transform: uppercase; letter-spacing: 2px; color: var(--cp); font-weight: 700; margin-bottom: .25rem; }
+.tl-titulo  { font: 600 1rem/1.2 var(--fh); color: var(--ct); margin-bottom: .15rem; }
+.tl-org     { font-size: .88rem; font-weight: 700; color: var(--cv); margin-bottom: .4rem; }
+.tl-desc    { font-size: .87rem; color: var(--ct2); line-height: 1.6; margin: 0; }
+
+/* ══════════════════════════════════
+   CERTIFICACIONES
+   ══════════════════════════════════ */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+  gap: 1.5rem;
+}
+.cert-card {
+  background: var(--cs); border-radius: var(--r);
+  box-shadow: var(--sh1); overflow: hidden;
+  transition: box-shadow .2s, transform .2s;
+}
+.cert-card:hover { box-shadow: var(--sh2); transform: translateY(-3px); }
+
+.cert-imagen {
+  background: #fff; padding: 8px 8px 20px;
+  box-shadow: 0 2px 8px rgba(42,31,26,.1);
+}
+.cert-imagen img {
+  width: 100%; height: 160px; object-fit: cover; border-radius: 2px;
+}
+.cert-imagen-vacia {
+  width: 100%; height: 160px; background: var(--cd);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2.5rem; color: var(--cb); border-radius: 2px;
+}
+.cert-body   { padding: 1rem 1.1rem; }
+.cert-titulo { font: 600 .92rem/1.3 var(--fh); color: var(--ct); margin-bottom: .2rem; }
+.cert-inst   { font-size: .83rem; font-weight: 700; color: var(--cp); margin-bottom: .5rem; }
+.cert-meta   { display: flex; gap: .75rem; font-size: .78rem; color: var(--ct2); font-weight: 700; }
+.cert-meta i { margin-right: 3px; color: var(--cv); }
+.cert-link   {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: .78rem; font-weight: 700; color: var(--ci);
+  margin-top: .65rem; text-decoration: none;
+}
+.cert-link:hover { color: var(--cp); }
+
+/* ══════════════════════════════════
+   PORTAFOLIO
+   ══════════════════════════════════ */
+.portfolio-filters { display: flex; gap: .5rem; flex-wrap: wrap; margin-bottom: 2rem; }
+.filter-btn {
+  padding: .5rem 1.25rem; border-radius: var(--pill);
+  border: 2px solid var(--cb); background: transparent;
+  color: var(--ct2); font: 700 .84rem/1 var(--fb);
+  cursor: pointer; transition: all .2s;
+}
+.filter-btn.active,
+.filter-btn:hover { border-color: var(--cp); color: var(--cp); background: #ffe8f3; }
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px,1fr));
+  gap: 1.25rem;
+}
+.portfolio-tile {
+  position: relative;
+  display: flex; align-items: flex-end;
+  min-height: 310px; border-radius: var(--rl);
+  overflow: hidden; color: #fff;
+  box-shadow: var(--sh2);
+  cursor: pointer;
+  transition: transform .35s;
+}
+.portfolio-tile img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform .5s;
+}
+.portfolio-tile:hover img { transform: scale(1.06); }
+.portfolio-tile::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(20,14,11,.88) 0%, rgba(20,14,11,.2) 55%, transparent 80%);
+}
+.portfolio-tile-body { position: relative; z-index: 1; padding: 1.25rem; }
+.portfolio-tile h3   { font: 600 1.1rem/1.2 var(--fh); color: #fff; margin-bottom: .2rem; }
+.portfolio-tile p    { font-size: .82rem; color: rgba(255,255,255,.75); margin: 0; }
+.portfolio-cat {
+  font-size: .65rem; text-transform: uppercase; letter-spacing: 3px;
+  color: #fde58a; font-weight: 700; margin-bottom: .3rem;
+}
+.portfolio-tile:nth-child(odd):hover  { transform: rotate(-1.2deg); }
+.portfolio-tile:nth-child(even):hover { transform: rotate(1.2deg); }
+
+/* placeholder sin imagen */
+.tile-placeholder {
+  position: absolute; inset: 0;
+  background: var(--cd);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 3rem; color: var(--cb);
+}
+
+/* ══════════════════════════════════
+   SERVICIOS
+   ══════════════════════════════════ */
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px,1fr));
+  gap: 1.5rem;
+}
+.servicio-card {
+  background: var(--cs); border-radius: var(--r);
+  padding: 1.6rem; box-shadow: var(--sh1);
+  border-top: 4px solid var(--cp);
+  transition: box-shadow .2s, transform .2s;
+}
+.servicio-card:hover { box-shadow: var(--sh2); transform: translateY(-3px); }
+.servicio-icono {
+  width: 52px; height: 52px; border-radius: 50%;
+  background: #ffe8f3; border: 2px solid var(--cb);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.25rem; color: var(--cp); margin-bottom: 1rem;
+}
+.servicio-nombre { font: 600 1rem/1.2 var(--fh); color: var(--ct); margin-bottom: .4rem; }
+.servicio-desc   { font-size: .88rem; color: var(--ct2); line-height: 1.65; margin-bottom: .85rem; }
+.servicio-precio { font: 600 1.05rem/1 var(--fm); color: var(--cp); }
+
+/* ══════════════════════════════════
+   TESTIMONIOS
+   ══════════════════════════════════ */
+.testimonios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px,1fr));
+  gap: 1.5rem;
+}
+.testimonio-card {
+  background: var(--cs); border-radius: var(--r);
+  padding: 1.6rem; position: relative;
+  border: 2px dashed var(--cb);
+  transition: border-color .2s;
+}
+.testimonio-card:hover { border-color: var(--cp); }
+.testimonio-comillas {
+  position: absolute; top: .75rem; right: 1.25rem;
+  font-size: 5rem; color: var(--cp); opacity: .08;
+  font-family: Georgia, serif; line-height: 1; pointer-events: none;
+}
+.testimonio-texto {
+  font-size: .93rem; color: var(--ct2); line-height: 1.75;
+  font-style: italic; margin-bottom: 1.25rem;
+  position: relative; z-index: 1;
+}
+.testimonio-autor { display: flex; align-items: center; gap: .75rem; }
+.testimonio-avatar {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--cp); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: .9rem; flex-shrink: 0; overflow: hidden;
+}
+.testimonio-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.testimonio-nombre { font: 700 .88rem/1.2 var(--fb); color: var(--ct); }
+.testimonio-evento { font-size: .78rem; color: var(--ct2); }
+
+/* ══════════════════════════════════
+   CONTACTO
+   ══════════════════════════════════ */
+.contacto-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 3rem; align-items: center;
+}
+@media (max-width: 720px) { .contacto-grid { grid-template-columns: 1fr; } }
+
+.contacto-items { display: flex; flex-direction: column; gap: 1.25rem; }
+.contacto-item  { display: flex; align-items: center; gap: 1rem; }
+.contacto-icono {
+  width: 46px; height: 46px; border-radius: 50%;
+  background: var(--cd); border: 2px solid var(--cb);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.05rem; color: var(--cp); flex-shrink: 0;
+}
+.contacto-label { font-size: .7rem; text-transform: uppercase; letter-spacing: 2px; color: var(--ct2); font-weight: 700; margin-bottom: 2px; }
+.contacto-valor { font-size: .93rem; color: var(--ct); font-weight: 700; text-decoration: none; }
+a.contacto-valor:hover { color: var(--cp); }
+
+.contacto-cta { display: flex; flex-direction: column; gap: 1rem; }
+.btn-wa-big {
+  background: var(--cw); color: #fff; border-color: var(--cw);
+  font-size: 1.05rem; width: 100%; justify-content: center;
+}
+.btn-wa-big:hover { background: var(--cw-h); border-color: var(--cw-h); color: #fff; }
+
+.social-row-centro { display: flex; gap: .6rem; justify-content: center; flex-wrap: wrap; }
+.soc-a-lg { width: 48px; height: 48px; font-size: 1.05rem; }
+
+/* ══════════════════════════════════
+   FOOTER
+   ══════════════════════════════════ */
+footer {
+  background: var(--cf); border-top: 1px solid var(--cb);
+  padding: 2.5rem clamp(1rem,4vw,2.5rem);
+  display: flex; flex-direction: column; align-items: center; gap: .7rem;
+  text-align: center;
+}
+.footer-brand  { display: flex; align-items: center; gap: .65rem; }
+.footer-k {
+  width: 32px; height: 32px; border-radius: 50%; background: var(--cp);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--fh); font-weight: 600; font-size: .95rem; color: #fff;
+}
+.footer-kname { font-family: var(--fh); font-size: 1rem; font-weight: 600; color: var(--ct); }
+.footer-txt   { font-size: .78rem; color: var(--ct2); }
+.footer-link  { color: var(--cp); text-decoration: none; font-weight: 700; }
+.footer-link:hover { color: var(--cv); }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════
+     NAVBAR
+     ══════════════════════════════════ -->
+<nav id="nav">
+  <a href="#inicio" class="nav-logo">
+    <div class="nav-k">K</div>
+    <div>
+      <div class="nav-marca">Ketsaltik</div>
+      <div class="nav-nombre">Andrea García</div>
+    </div>
+  </a>
+
+  <ul class="nav-menu">
+    <li><a href="#sobre-mi">Sobre mí</a></li>
+    <li><a href="#trayectoria">Trayectoria</a></li>
+    <li><a href="#portafolio">Portafolio</a></li>
+    <li><a href="#servicios">Servicios</a></li>
+  </ul>
+
+  <a href="https://wa.me/5215512345678" class="btn-wa-nav" target="_blank">
+    <i class="fab fa-whatsapp"></i> Escríbeme
+  </a>
+</nav>
+
+<main>
+
+<!-- ══════════════════════════════════
+     HERO
+     ══════════════════════════════════ -->
+<section class="hero" id="inicio">
+  <div class="container hero-inner">
+
+    <div class="hero-texto">
+      <div class="hero-eyebrow">hola, soy</div>
+      <h1 class="hero-nombre">Andrea <em>García</em></h1>
+      <p class="hero-titulo">Maquillista Artística · Body Paint · Catrina</p>
+      <div class="hero-ciudad">
+        <i class="fas fa-map-marker-alt"></i> Ciudad de México, México
+      </div>
+      <p class="hero-bio">
+        Soy artista de maquillaje con 6 años transformando personas en obras de arte. Me especializo en técnicas prehispánicas fusionadas con estilos contemporáneos.
+      </p>
+
+      <div class="hero-stats">
+        <div>
+          <div class="stat-n">6+</div>
+          <div class="stat-l">Años de<br>experiencia</div>
+        </div>
+        <div>
+          <div class="stat-n">320+</div>
+          <div class="stat-l">Clientes<br>atendidos</div>
+        </div>
+        <div>
+          <div class="stat-n">500+</div>
+          <div class="stat-l">Proyectos<br>completados</div>
+        </div>
+      </div>
+
+      <div class="hero-btns">
+        <a href="https://wa.me/5215512345678" class="btn btn-wa" target="_blank">
+          <i class="fab fa-whatsapp"></i> Escríbeme por WhatsApp
+        </a>
+        <a href="#portafolio" class="btn btn-sec">Ver portafolio</a>
+      </div>
+    </div>
+
+    <div class="hero-foto">
+      <div class="polaroid">
+        <!-- reemplaza src con tu foto -->
+        <img src="https://placehold.co/300x400/ffe8f3/d1006f?text=Tu+foto" alt="Andrea García">
+        <div class="polaroid-pie">Andrea García</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════
+     SOBRE MÍ
+     ══════════════════════════════════ -->
+<section class="section section-white" id="sobre-mi">
+  <div class="container">
+
+    <div class="section-head">
+      <div class="eyebrow">sobre mí</div>
+      <h2>Mi historia como artista</h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-body">
+        <p>
+          Soy artista de maquillaje con 6 años transformando personas en obras de arte. Me especializo en técnicas prehispánicas fusionadas con estilos contemporáneos.
+        </p>
+        <p>
+          Nacida en Ciudad de México, mi formación combina las artes visuales con la técnica profesional. Cada rostro es un lienzo único que merece su propia historia.
+        </p>
+        <p>
+          Mi trabajo ha sido reconocido en concursos nacionales y he tenido el privilegio de colaborar con producciones teatrales, editoriales de moda y eventos corporativos de primer nivel.
+        </p>
+        <div class="social-row">
+          <a href="#" class="soc-a" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="soc-a" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          <a href="#" class="soc-a" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <p class="aside-label">Especialidades</p>
+        <div class="tags-wrap">
+          <span class="tag tag-a">Body Paint</span>
+          <span class="tag tag-b">Maquillaje Artístico</span>
+          <span class="tag tag-c">Catrina Clásica</span>
+          <span class="tag tag-d">Caracterización Teatral</span>
+          <span class="tag tag-e">Maquillaje Prehispánico</span>
+          <span class="tag tag-a">Maquillaje de Fantasía</span>
+        </div>
+        <p class="aside-label">Contacto directo</p>
+        <div style="font-size:.9rem;color:var(--ct2);display:flex;flex-direction:column;gap:.4rem">
+          <div><i class="fas fa-map-marker-alt" style="color:var(--cp);width:18px"></i> Ciudad de México</div>
+          <div><i class="fas fa-envelope" style="color:var(--cp);width:18px"></i> andrea@ketsaltik.com</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════
+     TRAYECTORIA
+     ══════════════════════════════════ -->
+<section class="section section-cream" id="trayectoria">
+  <div class="container">
+
+    <div class="section-head">
+      <div class="eyebrow">mi camino</div>
+      <h2>Trayectoria profesional</h2>
+    </div>
+
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-dot tl-dot-estudio"><i class="fas fa-graduation-cap"></i></div>
+        <div class="tl-card">
+          <div class="tl-periodo">2014 – 2018</div>
+          <div class="tl-titulo">Licenciatura en Artes Visuales</div>
+          <div class="tl-org">Universidad Nacional Autónoma de México</div>
+          <p class="tl-desc">Especialización en técnicas pictóricas y diseño de personajes.</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot tl-dot-practica"><i class="fas fa-handshake"></i></div>
+        <div class="tl-card">
+          <div class="tl-periodo">2017</div>
+          <div class="tl-titulo">Pasantía en producción teatral</div>
+          <div class="tl-org">Teatro de los Insurgentes</div>
+          <p class="tl-desc">Asistencia en caracterización de elenco para 3 producciones de temporada.</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot tl-dot-trabajo"><i class="fas fa-briefcase"></i></div>
+        <div class="tl-card">
+          <div class="tl-periodo">2018 – Presente</div>
+          <div class="tl-titulo">Maquillista Principal</div>
+          <div class="tl-org">Ketsaltik Studio</div>
+          <p class="tl-desc">Diseño de maquillaje artístico para eventos, bodas y celebraciones en Ciudad de México.</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot tl-dot-logro"><i class="fas fa-trophy"></i></div>
+        <div class="tl-card">
+          <div class="tl-periodo">2021</div>
+          <div class="tl-titulo">1er Lugar — Concurso Nacional de Body Paint</div>
+          <div class="tl-org">AMPI México</div>
+          <p class="tl-desc">Reconocimiento por diseño temático prehispánico, categoría profesional.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════
+     CERTIFICACIONES
+     ══════════════════════════════════ -->
+<section class="section section-white" id="certificaciones">
+  <div class="container">
+
+    <div class="section-head">
+      <div class="eyebrow">mi formación</div>
+      <h2>Certificaciones y cursos</h2>
+    </div>
+
+    <div class="cert-grid">
+
+      <div class="cert-card">
+        <div class="cert-imagen">
+          <img src="https://placehold.co/300x160/fff7dc/d1006f?text=Certificado" alt="Certificado Body Paint">
+        </div>
+        <div class="cert-body">
+          <div class="cert-titulo">Curso Profesional de Body Paint</div>
+          <div class="cert-inst">Ketsaltik Academy</div>
+          <div class="cert-meta">
+            <span><i class="fas fa-calendar-alt"></i> 2022</span>
+            <span><i class="fas fa-clock"></i> 80 horas</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-imagen">
+          <div class="cert-imagen-vacia"><i class="fas fa-certificate"></i></div>
+        </div>
+        <div class="cert-body">
+          <div class="cert-titulo">Maquillaje Artístico Avanzado</div>
+          <div class="cert-inst">Instituto de Maquillaje CDMX</div>
+          <div class="cert-meta">
+            <span><i class="fas fa-calendar-alt"></i> 2020</span>
+            <span><i class="fas fa-clock"></i> 120 horas</span>
+          </div>
+          <a href="#" class="cert-link"><i class="fas fa-check-circle"></i> Verificar certificado</a>
+        </div>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-imagen">
+          <div class="cert-imagen-vacia"><i class="fas fa-certificate"></i></div>
+        </div>
+        <div class="cert-body">
+          <div class="cert-titulo">Caracterización Teatral y Cinematográfica</div>
+          <div class="cert-inst">Centro de Arte Dramático</div>
+          <div class="cert-meta">
+            <span><i class="fas fa-calendar-alt"></i> 2019</span>
+            <span><i class="fas fa-clock"></i> 60 horas</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════
+     PORTAFOLIO
+     ══════════════════════════════════ -->
+<section class="section section-cream" id="portafolio">
+  <div class="container">
+
+    <div class="section-head">
+      <div class="eyebrow">mis trabajos</div>
+      <h2>Portafolio</h2>
+    </div>
+
+    <div class="portfolio-filters">
+      <button class="filter-btn active" data-cat="all">Todos</button>
+      <button class="filter-btn" data-cat="Catrina">Catrina</button>
+      <button class="filter-btn" data-cat="Body Paint">Body Paint</button>
+      <button class="filter-btn" data-cat="Maquillaje Artístico">Maquillaje Artístico</button>
+      <button class="filter-btn" data-cat="Caracterización">Caracterización</button>
+    </div>
+
+    <div class="portfolio-grid">
+
+      <div class="portfolio-tile" data-cat="Catrina">
+        <img src="https://placehold.co/400x500/ffe8f3/d1006f?text=Trabajo" alt="Catrina Barroca">
+        <div class="portfolio-tile-body">
+          <div class="portfolio-cat">Catrina</div>
+          <h3>Catrina Barroca</h3>
+          <p>Diseño inspirado en el barroco mexicano para Día de Muertos</p>
+        </div>
+      </div>
+
+      <div class="portfolio-tile" data-cat="Body Paint">
+        <img src="https://placehold.co/400x500/e0f7fd/046080?text=Trabajo" alt="Quetzal Body Paint">
+        <div class="portfolio-tile-body">
+          <div class="portfolio-cat">Body Paint</div>
+          <h3>Quetzal Body Paint</h3>
+          <p>Representación del quetzal sagrado, técnica acuarela sobre piel</p>
+        </div>
+      </div>
+
+      <div class="portfolio-tile" data-cat="Maquillaje Artístico">
+        <img src="https://placehold.co/400x500/fffadc/7a5800?text=Trabajo" alt="Jade Prehispánico">
+        <div class="portfolio-tile-body">
+          <div class="portfolio-cat">Maquillaje Artístico</div>
+          <h3>Jade Prehispánico</h3>
+          <p>Inspirado en la diosa Coatlicue, dorado y jade</p>
+        </div>
+      </div>
+
+      <div class="portfolio-tile" data-cat="Caracterización">
+        <img src="https://placehold.co/400x500/f0e8fc/5f12a1?text=Trabajo" alt="La Llorona">
+        <div class="portfolio-tile-body">
+          <div class="portfolio-cat">Caracterización</div>
+          <h3>La Llorona</h3>
+          <p>Caracterización completa para producción teatral</p>
+        </div>
+      </div>
+
+      <div class="portfolio-tile" data-cat="Body Paint">
+        <img src="https://placehold.co/400x500/e0f7fd/046080?text=Trabajo" alt="Mariposa Monarca">
+        <div class="portfolio-tile-body">
+          <div class="portfolio-cat">Body Paint</div>
+          <h3>Mariposa Monarca</h3>
+          <p>Body paint inspirado en la migración de la monarca</p>
+        </div>
+      </div>
+
+      <div class="portfolio-tile" data-cat="Catrina">
+        <img src="https://placehold.co/400x500/ffe8f3/d1006f?text=Trabajo" alt="Catrina Glam">
+        <div class="portfolio-tile-body">
+          <div class="portfolio-cat">Catrina</div>
+          <h3>Catrina Glam</h3>
+          <p>Versión contemporánea con elementos de alta costura</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════
+     SERVICIOS
+     ══════════════════════════════════ -->
+<section class="section section-white" id="servicios">
+  <div class="container">
+
+    <div class="section-head">
+      <div class="eyebrow">¿en qué te ayudo?</div>
+      <h2>Mis servicios</h2>
+    </div>
+
+    <div class="servicios-grid">
+
+      <div class="servicio-card">
+        <div class="servicio-icono"><i class="fas fa-wand-magic-sparkles"></i></div>
+        <div class="servicio-nombre">Maquillaje para Eventos</div>
+        <p class="servicio-desc">Diseño personalizado para bodas, XV años y celebraciones. Incluye prueba previa.</p>
+        <div class="servicio-precio">Desde $800 MXN</div>
+      </div>
+
+      <div class="servicio-card">
+        <div class="servicio-icono"><i class="fas fa-paintbrush"></i></div>
+        <div class="servicio-nombre">Body Paint Artístico</div>
+        <p class="servicio-desc">Sesiones para fotografía, moda y eventos temáticos. Diseños personalizados.</p>
+        <div class="servicio-precio">Desde $2,500 MXN</div>
+      </div>
+
+      <div class="servicio-card">
+        <div class="servicio-icono"><i class="fas fa-masks-theater"></i></div>
+        <div class="servicio-nombre">Caracterización Teatral</div>
+        <p class="servicio-desc">Transformaciones completas para producciones teatrales y performances artísticos.</p>
+        <div class="servicio-precio">Desde $1,500 MXN</div>
+      </div>
+
+      <div class="servicio-card">
+        <div class="servicio-icono"><i class="fas fa-users"></i></div>
+        <div class="servicio-nombre">Talleres Grupales</div>
+        <p class="servicio-desc">Talleres de técnicas artísticas de maquillaje. Grupos de hasta 12 personas.</p>
+        <div class="servicio-precio">Desde $500 MXN/persona</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════
+     TESTIMONIOS
+     ══════════════════════════════════ -->
+<section class="section section-cream" id="testimonios">
+  <div class="container">
+
+    <div class="section-head">
+      <div class="eyebrow">lo que dicen</div>
+      <h2>Testimonios</h2>
+    </div>
+
+    <div class="testimonios-grid">
+
+      <div class="testimonio-card">
+        <div class="testimonio-comillas">"</div>
+        <p class="testimonio-texto">Increíble trabajo, superó todas mis expectativas para mi boda. Una artista excepcional con un talento único.</p>
+        <div class="testimonio-autor">
+          <div class="testimonio-avatar">S</div>
+          <div>
+            <div class="testimonio-nombre">Sofía Martínez</div>
+            <div class="testimonio-evento">Boda – Febrero 2024</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonio-card">
+        <div class="testimonio-comillas">"</div>
+        <p class="testimonio-texto">Profesionalismo total. Transformó a nuestro elenco en personajes únicos para la temporada. La volveremos a contratar.</p>
+        <div class="testimonio-autor">
+          <div class="testimonio-avatar">T</div>
+          <div>
+            <div class="testimonio-nombre">Teatro del Bosque</div>
+            <div class="testimonio-evento">Producción Teatral 2023</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonio-card">
+        <div class="testimonio-comillas">"</div>
+        <p class="testimonio-texto">Mi Catrina quedó perfecta. Todos en el festival me preguntaron quién me maquilló. ¡10 de 10!</p>
+        <div class="testimonio-autor">
+          <div class="testimonio-avatar">L</div>
+          <div>
+            <div class="testimonio-nombre">Luna Ramírez</div>
+            <div class="testimonio-evento">Festival Día de Muertos 2023</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════
+     CONTACTO
+     ══════════════════════════════════ -->
+<section class="section section-white" id="contacto">
+  <div class="container">
+
+    <div class="section-head">
+      <div class="eyebrow">hablemos</div>
+      <h2>¿Tienes un proyecto?</h2>
+      <p>Cuéntame tu idea y hacemos magia juntos</p>
+    </div>
+
+    <div class="contacto-grid">
+
+      <div class="contacto-items">
+        <div class="contacto-item">
+          <div class="contacto-icono"><i class="fas fa-map-marker-alt"></i></div>
+          <div>
+            <div class="contacto-label">Ubicación</div>
+            <div class="contacto-valor">Ciudad de México, México</div>
+          </div>
+        </div>
+        <div class="contacto-item">
+          <div class="contacto-icono"><i class="fab fa-whatsapp"></i></div>
+          <div>
+            <div class="contacto-label">WhatsApp</div>
+            <a href="https://wa.me/5215512345678" class="contacto-valor" target="_blank">+52 155 1234 5678</a>
+          </div>
+        </div>
+        <div class="contacto-item">
+          <div class="contacto-icono"><i class="fas fa-envelope"></i></div>
+          <div>
+            <div class="contacto-label">Email</div>
+            <a href="mailto:andrea@ketsaltik.com" class="contacto-valor">andrea@ketsaltik.com</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="contacto-cta">
+        <a href="https://wa.me/5215512345678" class="btn btn-wa btn-wa-big" target="_blank">
+          <i class="fab fa-whatsapp"></i> Escríbeme por WhatsApp
+        </a>
+        <div class="social-row-centro">
+          <a href="#" class="soc-a soc-a-lg" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="soc-a soc-a-lg" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          <a href="#" class="soc-a soc-a-lg" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ══════════════════════════════════
+     FOOTER
+     ══════════════════════════════════ -->
+<footer>
+  <div class="footer-brand">
+    <div class="footer-k">K</div>
+    <span class="footer-kname">Ketsaltik</span>
+  </div>
+  <p class="footer-txt">
+    Perfil de <strong>Andrea García López</strong> ·
+    <a href="https://www.ketsaltik.com" class="footer-link" target="_blank">ketsaltik.com</a>
+  </p>
+  <p class="footer-txt" style="opacity:.5">© 2026 Ketsaltik Studio · Maquillaje Artístico · Ciudad de México</p>
+</footer>
+
+<script>
+// Navbar sombra al hacer scroll
+window.addEventListener('scroll', () => {
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 10);
+});
+
+// Filtros del portafolio
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const cat = btn.dataset.cat;
+    document.querySelectorAll('.portfolio-tile').forEach(tile => {
+      tile.style.display = (cat === 'all' || tile.dataset.cat === cat) ? '' : 'none';
+    });
+  });
+});
+</script>
+</body>
+</html>
