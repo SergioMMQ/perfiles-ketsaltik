@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perfiles Profesionales | Ketsaltik</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cp: #d1006f;
+  --cv: #5f12a1;
+  --ct: #2b1a4a;
+  --ct2: #5a4d6b;
+  --cb: #ebe3f2;
+  --cf: #fffdf8;
+  --fh: 'Fraunces', Georgia, serif;
+  --fb: 'Nunito Sans', system-ui, sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--cf); color: var(--ct);
+  font-family: var(--fb); min-height: 100vh;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  padding: 2rem;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(209,0,111,.08), transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(95,18,161,.08), transparent 40%),
+    #fffdf8;
+}
+.logo {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: var(--cp);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--fh); font-weight: 600; font-size: 1.5rem; color: #fff;
+  margin-bottom: 1.5rem;
+}
+p.marca {
+  font-size: .65rem; text-transform: uppercase; letter-spacing: 3px;
+  color: var(--ct2); margin-bottom: .5rem; text-align: center;
+}
+h1 {
+  font-family: var(--fh); font-size: clamp(2rem, 5vw, 3rem);
+  color: var(--ct); text-align: center; line-height: 1.15;
+}
+h1 em { font-style: italic; color: var(--cp); }
+p.sub {
+  color: var(--ct2); font-size: 1rem; margin-top: .75rem;
+  text-align: center; max-width: 380px; line-height: 1.6;
+}
+a.link {
+  margin-top: 2rem; color: var(--cp); font-weight: 700;
+  font-size: .9rem; text-decoration: none; letter-spacing: .5px;
+}
+a.link:hover { color: var(--cv); }
+</style>
+</head>
+<body>
+  <div class="logo">K</div>
+  <p class="marca">Ketsaltik Studio</p>
+  <h1>Perfiles <em>Profesionales</em></h1>
+  <p class="sub">Directorio de artistas del equipo Ketsaltik.</p>
+  <a class="link" href="https://www.ketsaltik.com" target="_blank">↗ ketsaltik.com</a>
+</body>
+</html>
